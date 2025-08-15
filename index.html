@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EthioVEO3 - TikTok Video Downloader</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-play-circle"></i>
+                </div>
+                <h1>EthioVEO3</h1>
+            </div>
+            <p class="tagline">Download TikTok Videos Instantly</p>
+            <p class="tagline">ቲክቶክ ቪዲዮችን በፍጥነት ዳውንሎድ ያድርጉ</p>
+        </header>
+
+        <main class="main-content">
+            <div class="download-card">
+                <div class="card-header">
+                    <i class="fab fa-tiktok"></i>
+                    <h2>Download TikTok Video</h2>
+                </div>
+                
+                <div class="input-section">
+                    <div class="input-group">
+                        <input 
+                            type="text" 
+                            id="videoUrl" 
+                            placeholder="Paste TikTok video URL here..."
+                            class="url-input"
+                        >
+                        <button id="downloadBtn" class="download-btn">
+                            <i class="fas fa-download"></i>
+                            Download
+                        </button>
+                    </div>
+                    <button id="clearBtn" class="clear-btn">
+                        <i class="fas fa-trash"></i>
+                        Clear
+                    </button>
+                </div>
+
+                <div class="info-section">
+                    <div class="info-item">
+                        <i class="fas fa-info-circle"></i>
+                        <span>Paste any TikTok video link to download</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>100% Safe & Secure</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-bolt"></i>
+                        <span>Fast & Free Downloads</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="resultSection" class="result-section hidden">
+                <div class="result-header">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Video Ready for Download</h3>
+                </div>
+                <div class="video-info">
+                    <div class="thumbnail">
+                        <img id="videoThumbnail" src="" alt="Video Thumbnail">
+                    </div>
+                    <div class="video-details">
+                        <h4 id="videoTitle">Video Title</h4>
+                        <p id="videoAuthor">@username</p>
+                        <div class="download-options">
+                            <button id="downloadHD" class="download-option-btn">
+                                <i class="fas fa-download"></i>
+                                Download HD
+                            </button>
+                            <button id="downloadSD" class="download-option-btn">
+                                <i class="fas fa-download"></i>
+                                Download SD
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="errorSection" class="error-section hidden">
+                <div class="error-header">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <h3>Download Failed</h3>
+                </div>
+                <p id="errorMessage">Unable to process the video. Please check the URL and try again.</p>
+                <button id="retryBtn" class="retry-btn">
+                    <i class="fas fa-redo"></i>
+                    Try Again
+                </button>
+            </div>
+
+            <div id="loadingSection" class="loading-section hidden">
+                <div class="spinner"></div>
+                <p>Processing video...</p>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 EthioVEO3. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
