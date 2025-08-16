@@ -58,6 +58,14 @@ body {
     font-size: 1.2rem;
     color: rgba(255,255,255,0.9);
     font-weight: 300;
+    margin-bottom: 8px;
+}
+
+.tagline-amharic {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.8);
+    font-weight: 300;
+    font-family: 'Noto Sans Ethiopic', 'Poppins', sans-serif;
 }
 
 /* Main Content */
@@ -94,6 +102,15 @@ body {
     font-size: 1.8rem;
     color: #333;
     font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.amharic-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    font-weight: 400;
+    font-family: 'Noto Sans Ethiopic', 'Poppins', sans-serif;
+    margin: 0;
 }
 
 /* Input Section */
@@ -135,14 +152,29 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 8px;
+    gap: 4px;
     white-space: nowrap;
+    min-height: 60px;
+    justify-content: center;
 }
 
 .download-btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(255, 0, 80, 0.3);
+}
+
+.btn-text-en {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.btn-text-am {
+    font-size: 0.8rem;
+    font-weight: 400;
+    font-family: 'Noto Sans Ethiopic', 'Poppins', sans-serif;
+    opacity: 0.9;
 }
 
 .download-btn:active {
@@ -159,9 +191,12 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 8px;
+    gap: 4px;
     margin: 0 auto;
+    min-height: 50px;
+    justify-content: center;
 }
 
 .clear-btn:hover {
@@ -194,6 +229,23 @@ body {
 .info-item span {
     color: #555;
     font-size: 0.95rem;
+}
+
+.info-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.info-en {
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.info-am {
+    color: #777;
+    font-size: 0.85rem;
+    font-family: 'Noto Sans Ethiopic', 'Poppins', sans-serif;
 }
 
 /* Result Section */
@@ -234,12 +286,71 @@ body {
     flex-shrink: 0;
 }
 
+.thumbnail {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.thumbnail-link {
+    display: block;
+    text-decoration: none;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.thumbnail-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
 .thumbnail img {
     width: 120px;
     height: 120px;
     border-radius: 12px;
     object-fit: cover;
     border: 3px solid #e1e5e9;
+    transition: all 0.3s ease;
+}
+
+.thumbnail-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+    color: white;
+    text-align: center;
+}
+
+.thumbnail-link:hover .thumbnail-overlay {
+    opacity: 1;
+}
+
+.thumbnail-overlay i {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    color: #ff0050;
+}
+
+.overlay-text {
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+
+.overlay-text-am {
+    font-size: 0.7rem;
+    font-family: 'Noto Sans Ethiopic', 'Poppins', sans-serif;
+    opacity: 0.9;
 }
 
 .video-details {
@@ -273,8 +384,11 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 8px;
+    gap: 4px;
+    min-height: 50px;
+    justify-content: center;
 }
 
 .download-option-btn:hover {
@@ -313,6 +427,18 @@ body {
 .error-section p {
     color: #666;
     margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.error-message {
+    margin-bottom: 25px;
+}
+
+.error-amharic {
+    color: #777;
+    font-size: 0.9rem;
+    font-family: 'Noto Sans Ethiopic', 'Poppins', sans-serif;
+    margin-top: 10px;
     line-height: 1.6;
 }
 
@@ -366,6 +492,23 @@ body {
 .loading-section p {
     color: #666;
     font-size: 1.1rem;
+}
+
+.loading-text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.loading-en {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.loading-am {
+    color: #777;
+    font-size: 1rem;
+    font-family: 'Noto Sans Ethiopic', 'Poppins', sans-serif;
 }
 
 /* Footer */

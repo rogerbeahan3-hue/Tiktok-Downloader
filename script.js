@@ -205,6 +205,14 @@ function showResult(videoInfo) {
         videoThumbnail.src = 'https://picsum.photos/300/300?random=1';
     }
     
+    // Update thumbnail link to point to the original TikTok video
+    const originalUrl = videoUrlInput.value.trim();
+    if (originalUrl) {
+        const thumbnailLink = document.getElementById('thumbnailLink');
+        thumbnailLink.href = originalUrl;
+        thumbnailLink.title = `View original video on TikTok`;
+    }
+    
     // Safely set the title
     if (videoInfo.title && typeof videoInfo.title === 'string') {
         videoTitle.textContent = videoInfo.title;
@@ -355,6 +363,20 @@ function init() {
     // Add some interactive features
     addInputValidation();
     addCopyPasteSupport();
+    
+    // Auto-load the placeholder video if it exists
+    autoLoadPlaceholderVideo();
+}
+
+// Auto-load placeholder video if URL is present
+function autoLoadPlaceholderVideo() {
+    const url = videoUrlInput.value.trim();
+    if (url && isValidTikTokUrl(url)) {
+        // Small delay to ensure everything is loaded
+        setTimeout(() => {
+            handleDownload();
+        }, 1000);
+    }
 }
 
 // Add input validation
